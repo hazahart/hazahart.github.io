@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 1 IS - Equipo AVR's</title>
     <!-- Vinculo css -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="date-container">
+      <h3 id="date"></h3>
+      <h4 id="clock"></h4>
+    </section>
     <h1>Práctica 1 IS</h1>
     <h2 id="team-name">Equipo AVR's</h2>
-    
+
     <!-- Seccion de integrantes -->
     <div id="member-section">
-        <img id="member-photo" src="img/alumno1.jpg" alt="Imagen del Integrante">
-        <p id="member-desc">Alumno 1: Emiliano Rebolledo, estudiante de 7mo.</p>
+      <img
+        id="member-photo"
+        src="img/alumno1.jpg"
+        alt="Imagen del Integrante"
+      />
+      <h4 id="member-name">Emiliano Rebolledo</h4>
+      <p id="member-desc">Estudiante de 7mo semestre.</p>
     </div>
 
     <!-- Boton para JS -->
     <button id="colorButton">Cambio de fondo</button>
-    <button id="switchButton">Mostrar siguiente integrante</button>
+    <button id="switchButton">Mostrar Alumno 2</button>
 
     <!-- Vinculo JS -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

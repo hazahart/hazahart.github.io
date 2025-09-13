@@ -1,43 +1,49 @@
 /* Nueva Fuente Lexend Zetta extraida de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap");
 
 /*! Estilos Generales */
-body{
-    font-family: 'Lexend Zetta', Arial,sans-serif;
-    text-align: center;
-    margin-top: 20px;
-    background-color: #f4f4f4;
+body {
+  font-family: "Lexend Zetta", Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  transition: background-color 0.5s ease;
 }
 /*! Estilo Titulos */
-h1{
-    color: #333;
+h1 {
+  color: #333;
 }
 
 /*! Estilo Seccion Miembros */
-#team-name{
-    color: #007bff;
-    margin-bottom: 20px;
+#team-name {
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-#member-section img{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 10px 0;
+#member-section img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /*! Estilo Botones */
-button{
-    margin: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
 }
-button:hover{
-    background-color: #014fa3;
+button:hover {
+  background-color: #014fa3;
+}
+
+.date-container {
+  text-align: right;
 }
