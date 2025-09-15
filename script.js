@@ -1,24 +1,24 @@
-//* Colores del fondo
-const colors = ["#f4f4f4", "#ba3c33", "#ccffcc", "#ccccff", "#a491ca", "#c9b88d"];
+// Colores del fondo
+const colors = ["#f4f4f4", "#ba3c33", "#ccffcc", "#ccccff", "#a682ef", "#c9b88d"];
 let colorIndex = 0;
 
-//* Datos de los integrantes
-const descAlumno1 = "Estudiante de 7mo semestre.";
+// Datos de los integrantes
+const descAlumno1 = "Estudiante de 7mo. Dominio de lenguajes como Python, Java y PHP.\nMe gustan los deportes como el futbol y futbol americano, además del anime y el idioma japonés.";
 const descAlumno2 = "Estudiante de noveno semestre.\nMe gustan los videojuegos, la música Rock/Metal y programar.";
 
 const members = [
-    { photo: "alumno1.jpg", nombre: "Emiliano Rebolledo", title: "Alumno 1", desc: descAlumno1 },
+    { photo: "alumno1.jpg", nombre: "Emiliano Rebolledo Navarrete", title: "Alumno 1", desc: descAlumno1 },
     { photo: "alumno2.jpg", nombre: "Gustavo Ramírez Mireles", title: "Alumno 2", desc: descAlumno2 }
 ];
 let memberIndex = 0;
 
-//* Evento para el cambio de color
+// Evento para el cambio de color
 document.getElementById("colorButton").addEventListener("click", () => {
     colorIndex = (colorIndex + 1) % colors.length;
     document.body.style.backgroundColor = colors[colorIndex];
 });
 
-//* Evento para el cambio de integrante
+// Evento para el cambio de integrante
 document.getElementById("switchButton").addEventListener("click", () => {
     const memberPhoto = document.getElementById("member-photo");
 

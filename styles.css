@@ -1,7 +1,7 @@
 /* Nueva Fuente Lexend Zetta extraida de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap");
 
-/*! Estilos Generales */
+/* Estilos Generales */
 body {
   font-family: "Lexend Zetta", Arial, sans-serif;
   text-align: center;
@@ -9,17 +9,16 @@ body {
   background-color: #f4f4f4;
   transition: background-color 0.5s ease;
 }
-/*! Estilo Titulos */
+/* Estilo Titulos */
 h1 {
   color: #333;
 }
-
-/*! Estilo Seccion Miembros */
 #team-name {
   color: #007bff;
   margin-bottom: 20px;
 }
 
+/* Estilo Seccion Miembros */
 #member-section img {
   width: 150px;
   height: 150px;
@@ -29,8 +28,9 @@ h1 {
   transition: opacity 0.3s ease-in-out;
 }
 
-/*! Estilo Botones */
+/* Estilo Botones */
 button {
+  font-family: "Lexend Zetta", Arial, sans-serif;
   margin: 10px;
   padding: 10px 15px;
   font-size: 16px;
@@ -43,7 +43,7 @@ button {
 button:hover {
   background-color: #014fa3;
 }
-
+/* Estilo Contenedor de Fecha */
 .date-container {
   text-align: right;
 }
