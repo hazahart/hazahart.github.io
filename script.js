@@ -40,7 +40,7 @@ document.getElementById("switchButton").addEventListener("click", () => {
         const nextMemberIndex = (memberIndex + 1) % members.length;
         const nextMemberName = members[nextMemberIndex].title;
         document.getElementById("switchButton").innerText = `Mostrar ${nextMemberName}`;
-    }, 300); // El tiempo (400ms) debe coincidir con la transición del CSS
+    }, 300); // El tiempo (300ms) debe coincidir con la transición del CSS
 });
 
 // Función para añadir un cero delante si el número es menor a 10
@@ -48,6 +48,7 @@ function formatTimeUnit(unit) {
     return unit < 10 ? '0' + unit : unit;
 }
 
+// Funcion para actualizar fecha y hora
 function updateDateTime() {
     // Arreglos para los nombres de días y meses
     const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -81,3 +82,45 @@ setInterval(updateDateTime, 1000);
 
 // La llamamos una vez al inicio para que no haya retraso al cargar la página
 updateDateTime();
+
+/* ----------------- Funciones adicionales para interacción con la foto ----------------- */
+const memberPhoto = document.getElementById("member-photo");
+
+// Crear tooltip para mostrar al pasar el mouse sobre la imagen
+const tooltip = document.createElement("span");
+tooltip.textContent = "Haz clic para destacar";
+tooltip.style.position = "absolute";
+tooltip.style.backgroundColor = "rgba(0,0,0,0.7)";
+tooltip.style.color = "#fff";
+tooltip.style.padding = "5px 10px";
+tooltip.style.borderRadius = "5px";
+tooltip.style.fontSize = "12px";
+tooltip.style.display = "none";
+tooltip.style.pointerEvents = "none";
+document.body.appendChild(tooltip);
+
+// Mostrar tooltip al hacer hover
+memberPhoto.addEventListener("mouseenter", (e) => {
+  tooltip.style.display = "block";
+  tooltip.style.left = e.pageX + 10 + "px";
+  tooltip.style.top = e.pageY + 10 + "px";
+});
+
+// Mover tooltip con el mouse
+memberPhoto.addEventListener("mousemove", (e) => {
+  tooltip.style.left = e.pageX + 10 + "px";
+  tooltip.style.top = e.pageY + 10 + "px";
+});
+
+// Ocultar tooltip cuando el mouse sale de la imagen
+memberPhoto.addEventListener("mouseleave", () => {
+  tooltip.style.display = "none";
+});
+
+// Cambiar borde temporal al hacer clic en la foto
+memberPhoto.addEventListener("click", () => {
+  memberPhoto.style.border = "5px solid #44FF77"; // Borde verde
+  setTimeout(() => {
+    memberPhoto.style.border = "none"; // Volver a normalidad
+  }, 5000); // Después de 1 segundo
+});

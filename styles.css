@@ -9,6 +9,7 @@ body {
   background-color: #f4f4f4;
   transition: background-color 0.5s ease;
 }
+
 /* Estilo Titulos */
 h1 {
   color: #333;
@@ -25,7 +26,13 @@ h1 {
   object-fit: cover;
   border-radius: 50%;
   margin: 10px 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease-in-out; /* Agregamos transform para zoom */
+  cursor: pointer; /* Indicamos que es interactiva */
+}
+
+/* Zoom al hacer hover en la imagen */
+#member-section img:hover {
+  transform: scale(1.2);
 }
 
 /* Estilo Botones */
@@ -43,6 +50,7 @@ button {
 button:hover {
   background-color: #014fa3;
 }
+
 /* Estilo Contenedor de Fecha */
 .date-container {
   text-align: right;
